@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 24rem;
+}
+
+:root {
+  --hue: 218;
+  --bg-main: hsl(var(--hue), 17%, 62%);
+  --legend-color: hsl(var(--hue), 0%, 100%);
+  --bg-title-legend: hsl(var(--hue), 17%, 79%);
+  --bg-p: hsl(var(--hue), 17%, 35%);
+  --bg-p1: hsl(var(--hue), 84%, 12%);
+  --bg-header: hsl(var(--hue), 100%, 97%);
+  --bg-boxes: hsl(var(--hue), 91%, 96%);
+  
+  --ff-p1: 'palanquin', sans-serif;
+  --ff-p: 'staatliches', sans-serif;
+
+  --fs-p1: 1.25rem;
+  --fs-p: 1.25rem
+}
+
+main {
+  text-align: center;
+  padding: 2rem 0;
+  
+  background-color: var(--bg-main);
+  
+  width: 100%;
+  height: 17.4375rem;
+}
+
+#logo {
+  width: 8.5625rem;
+  padding-bottom: 2.5rem;
+  
+
+  filter: drop-shadow(0px 6px 6px 
+  rgba(0, 0, 0, 0.25));
+}
+
+legend {
+  font-family: 'staatliches', sans-serif;
+  font-size: 2.5rem;
+
+  letter-spacing: 0.05em;
+
+  color: var(--legend-color);
+
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+} 
+
+.box-title {
+  height: 3.0625rem;
+  background-color: var(--bg-title-legend);
+}
+
+header {
+  text-align: center;
+  background: var(--bg-header);
+  
+  padding-bottom: 2.25rem;
+}
+
+#images {
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+#p1 {
+  font-family: var(--ff-p1);
+  color: var(--bg-p1);
+
+  text-align: center;
+
+  padding-top: 0.875rem;
+  margin-bottom: 3.9375rem;
+}
+
+p {
+  font-family: var(--ff-p);
+  font-size: var(--fs-p);
+  letter-spacing: 0.05em;
+
+  color: var(--bg-p); 
+}
+
+.card {
+  position: absolute;
+
+  border-radius: 1.25rem;
+
+  background: var(--bg-boxes);
+  width: 7rem;
+
+  margin-left: 13.5rem;
+  margin-top: 1.0625rem;
+
+  animation-duration: 1s;
+  animation-name: card;
+}
+
+#card1 {
+  margin-bottom: 2rem;
+}
+
+@keyframes slidein {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes card {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+
